@@ -11,12 +11,29 @@ var app = new Vue({
         displayMess: '',
         password: '',
         events: [], 
-        sortedEvents: [],
+        filter: '',
         EventTypes: ['Marathon','Art Gala','Concert','Festival','Learning', 'Fundraiser','Other'],
         months : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     },
     created(){
         this.getEvents();
+    },
+    computed: {
+      sortedEvents: function() {
+        if (this.filter === '') {
+          return this.events;
+        }
+        else {
+          var sorted = [];
+          for (var i = 0; i < this.events.length; i++) {
+            if (this.events[i].eventType === this.filter) {
+              sorted.push(this.events[i]);
+            }
+          }
+          return sorted;
+        }
+      }
+
     },
     watch: {
       create() {
@@ -27,9 +44,6 @@ var app = new Vue({
           document.getElementById("enterInfo").style.display = "none";
         }
       },
-      sortedEvents() {
-        console.log("the sorted events was changed");
-      }
     },
     methods: {
         async addEvent(){
@@ -103,14 +117,9 @@ var app = new Vue({
                 console.log(error);
             }
         },
-        sortEvents() {
-          console.log("the sorted events was changed");
-          this.sortedEvents = [];
-          for (var i = 0; i < this.events.length; i++) {
-            if (this.events[i].eventType === this.eventType) {
-              this.sortedEvents.push(this.events[i]);
-            }
-          }
+        clearFilter() {
+          this.filter = '';
+          window.location.reload();
         }
     }
 });

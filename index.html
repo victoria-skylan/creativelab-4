@@ -43,35 +43,15 @@
     <div id="displayInfo">
         <h3>
             <div id="sort">
-              <form @submit="sortEvents">
                   View Events:&nbsp; &nbsp; &nbsp; &nbsp;
-                  <select v-model="eventType">
+                  <select v-model="filter">
                       <option v-for="t in EventTypes">{{t}}</option>
                   </select>
-                  <button type="submit">by type</button> 
-              </form>
+                  <button @click="clearFilter()">clear</button> 
             </div>
         </h3>
 
-        <div id="allEvents">
-            <div v-for="e in events">
-                <div class="display">
-                  <h3 id="dateInfo">{{e.month}}  &nbsp; {{e.eventDate}}
-                   &nbsp; &nbsp; 
-                   <button @click="deleteEvent(e)" class="delete">x</button></h3>
-                   <div class="insideDisplay">
-                      <h2>{{e.eventName}}</h2>
-                      <div class="superinsideDisplay">
-                          <h3>{{e.eventType}}</h3>
-                          <p>{{e.description}}</p>
-                          <p id="rsvp">{{e.reservations}}&nbsp; &nbsp; &nbsp; <button v-on:click="updateEvent(e)">Reserve a Spot</button></p>
-                      </div>
-                   </div>
-                </div>
-              </div>
-        </div>
-
-        <div id="sortedEvents">
+        <div id="theSortedEvents">
             <div v-for="e in sortedEvents">
                 <div class="display">
                   <h3 id="dateInfo">{{e.month}}  &nbsp; {{e.eventDate}}

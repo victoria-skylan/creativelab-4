@@ -1,0 +1,73 @@
+[debug] [2019-06-13T15:13:19.390Z] ----------------------------------------------------------------------
+[debug] [2019-06-13T15:13:19.393Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2019-06-13T15:13:19.393Z] CLI Version:   6.7.2
+[debug] [2019-06-13T15:13:19.393Z] Platform:      darwin
+[debug] [2019-06-13T15:13:19.393Z] Node Version:  v10.15.3
+[debug] [2019-06-13T15:13:19.398Z] Time:          Thu Jun 13 2019 09:13:19 GMT-0600 (Mountain Daylight Time)
+[debug] [2019-06-13T15:13:19.398Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-13T15:13:19.416Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-13T15:13:19.416Z] > authorizing via signed-in user
+[debug] [2019-06-13T15:13:19.416Z] [iam] checking project victoriablack-4dd3d for permissions ["firebase.projects.get"]
+[debug] [2019-06-13T15:13:19.418Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-06-13T15:13:19.418Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-06-13T15:13:19.639Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T15:13:19.663Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/victoriablack-4dd3d:testIamPermissions  
+
+[debug] [2019-06-13T15:13:20.020Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T15:13:20.021Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/victoriablack-4dd3d  
+ 
+[debug] [2019-06-13T15:13:20.326Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Victoria/Documents/CS260/creativelab4'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-06-13T15:13:21.240Z] Fetching environment
+[debug] [2019-06-13T15:13:21.243Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/836956998678:getServerAppConfig  
+ 
+[debug] [2019-06-13T15:13:21.244Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/836956998678/clients/_:getWebAppConfig  
+ 
+[debug] [2019-06-13T15:13:21.465Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-13T15:13:21.466Z] Starting @google-cloud/functions-emulator
+[debug] [2019-06-13T15:13:21.678Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-06-13T15:13:23.055Z] Parsing function triggers
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] ✔  functions: app: http://localhost:5001/victoriablack-4dd3d/us-central1/app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events/0.6976267527566344 to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events/0.7478713153850289 to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events/0.7478713153850289 to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app
+[info] [hosting] Rewriting /api/events to http://localhost:5001/victoriablack-4dd3d/us-central1/app for local Function app

@@ -47,10 +47,6 @@ body {
 #enterInfo {
     display: none;
 }
-
-#allEvents {
-    display: none;
-}
 #sort {
     text-align: right;
     padding-right: 30px;
