@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Creative Project 4</title>
+</head>
+<body>
+    <div id="theTop">
+        <h1>E v e n t &nbsp M a n a g e r</h1>
+    </div>
+    <div class="subTop">
+        <h3>Fill your life with some fun</h3>
+    </div>
+
+  <div id="app">
+    <div class="menu">
+          <h3>- - - - - - - &nbsp; &nbsp; <button @click="create = true" class="crtEvt">ADD AN EVENT</button> &nbsp; &nbsp; - - - - - - - </h3>
+     </div>
+    <div id="enterInfo">
+        <form @submit="addEvent">
+          <h2>Enter Event Information:</h2>
+           <p>Month: &nbsp 
+              <select v-model="month">
+                <option v-for="m in months">{{m}}</option>
+              </select>
+              &nbsp Day: &nbsp<input v-model="eventDate"></p>
+              <p>Event Name:<input v-model="eventName" ></p>
+              <p>Event Type: &nbsp
+              <select v-model="eventType">
+                <option disabled value="">Select</option>
+                <option v-for="e in EventTypes">{{e}}</option>
+              </select>
+          </p> 
+            <p>Description:</br><textarea v-model="description"></textarea></p>
+            <p>Final Message for Attendees:</br> <textarea v-model="displayMess"> </textarea></p>
+            <button type="submit">Create Event</button>
+        </form>
+    </div>
+
+    <div id="displayInfo">
+        <h3>
+            <div id="sort">
+              <form @submit="sortEvents">
+                  View Events:&nbsp; &nbsp; &nbsp; &nbsp;
+                  <select v-model="eventType">
+                      <option v-for="t in EventTypes">{{t}}</option>
+                  </select>
+                  <button type="submit">by type</button> 
+              </form>
+            </div>
+        </h3>
+
+        <div id="allEvents">
+            <div v-for="e in events">
+                <div class="display">
+                  <h3 id="dateInfo">{{e.month}}  &nbsp; {{e.eventDate}}
+                   &nbsp; &nbsp; 
+                   <button @click="deleteEvent(e)" class="delete">x</button></h3>
+                   <div class="insideDisplay">
+                      <h2>{{e.eventName}}</h2>
+                      <div class="superinsideDisplay">
+                          <h3>{{e.eventType}}</h3>
+                          <p>{{e.description}}</p>
+                          <p id="rsvp">{{e.reservations}}&nbsp; &nbsp; &nbsp; <button v-on:click="updateEvent(e)">Reserve a Spot</button></p>
+                      </div>
+                   </div>
+                </div>
+              </div>
+        </div>
+
+        <div id="sortedEvents">
+            <div v-for="e in sortedEvents">
+                <div class="display">
+                  <h3 id="dateInfo">{{e.month}}  &nbsp; {{e.eventDate}}
+                   &nbsp; &nbsp; 
+                   <button @click="deleteEvent(e)" class="delete">x</button></h3>
+                   <div class="insideDisplay">
+                      <h2>{{e.eventName}}</h2>
+                      <div class="superinsideDisplay">
+                          <h3>{{e.eventType}}</h3>
+                          <p>{{e.description}}</p>
+                          <p id="rsvp">{{e.reservations}}&nbsp; &nbsp; &nbsp; <button v-on:click="updateEvent(e)">Reserve a Spot</button></p>
+                      </div>
+                   </div>
+                </div>
+              </div>
+
+        </div>
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

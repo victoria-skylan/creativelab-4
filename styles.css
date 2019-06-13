@@ -1,0 +1,103 @@
+body {
+    font-family: 'Delius', sans-serif;
+    font-size: 16px;
+    background:#eaeaea;
+}
+#theTop {
+    background-color: rgb(196, 174, 185);
+    text-align: center;
+    padding: 20px 10rem;
+    margin: 2em 6em;
+    text-transform: uppercase;
+    font-family: 'Delius', sans-serif;
+}
+.menu {
+    text-align: center;
+}
+#app {
+    margin: 2em 6em;
+}
+#enterInfo {
+    padding: 2em 6em;
+    border: 2px solid rgb(196, 174, 185);
+    font-family: 'Delius', sans-serif;
+}
+.crtEvt {
+    border: 1px black solid;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+.subTop {
+    margin: 2em 6em;
+    margin-top: 0px;
+    border: 2px solid rgb(196, 174, 185);
+    background: #f9f9f9;
+    text-align: center;
+    font-family: 'Delius', sans-serif;
+}
+.menu {
+    margin: 2em 6em;
+    margin-top: 0px;
+    font-family: 'Delius', sans-serif;
+}
+#enterInfo {
+    display: none;
+}
+
+#allEvents {
+    display: none;
+}
+#sort {
+    text-align: right;
+    padding-right: 30px;
+}
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+}
+
+input, textarea, select, button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+.problem {
+    flex: 5;
+}
+
+.delete {
+    flex: 1;
+}
+.display {
+    background-color: white;
+    padding: 5px;
+    margin: 30px;
+}
+#dateInfo {
+    margin-right: 20px;
+    text-align: right;
+    color: #5e3249;
+    font-weight: bold;
+}
+.insideDisplay {
+    background: #c6bac0;
+    margin: 20px;
+}
+.insideDisplay h2 {
+    padding: 5px;
+    text-align: center;
+    background: #937685;
+}
+.superinsideDisplay {
+    padding: 1px 20px;
+}
+#rsvp {
+    text-align: right;
+    font-weight: bold;
+    padding: 3px;
+}
