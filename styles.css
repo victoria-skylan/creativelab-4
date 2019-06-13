@@ -2,12 +2,17 @@ body {
     font-family: 'Delius', sans-serif;
     font-size: 16px;
     background:#eaeaea;
+    background-image: url("liberty.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
 }
 #theTop {
-    background-color: rgb(196, 174, 185);
+    background-color: #999999;
+    color: white;
     text-align: center;
-    padding: 20px 10rem;
-    margin: 2em 6em;
+    padding: 20px 5rem;
+    margin: 2em 2em;
     text-transform: uppercase;
     font-family: 'Delius', sans-serif;
 }
@@ -35,7 +40,7 @@ body {
     margin: 2em 6em;
     margin-top: 0px;
     border: 2px solid rgb(196, 174, 185);
-    background: #f9f9f9;
+    
     text-align: center;
     font-family: 'Delius', sans-serif;
 }
@@ -96,4 +101,7 @@ input, textarea, select, button {
     text-align: right;
     font-weight: bold;
     padding: 3px;
+}
+#footer {
+    text-align: center;
 }
