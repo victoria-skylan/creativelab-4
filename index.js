@@ -10,7 +10,7 @@ var db = firebase.firestore();
 
 var eventRef = db.collection('events');
         
-app.get('/api/events', async (req,res) => {
+app.get('/api/events', async (req, res) => {
     try{
         let querySnapshot = await eventRef.get();
         res.send(querySnapshot.docs.map(doc => doc.data()));
